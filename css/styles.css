@@ -254,7 +254,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height
 .swatch.is-active .swatch__img { opacity: 1; }
 .swatch.is-active .swatch__go { opacity: 1; transform: none; }
 .swatch__bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: var(--accent); }
-.swatch.is-active .swatch__bar { width: 100%; transition: width 6s linear; }
+/* animation (not transition) so the bar also runs on the first, born-active swatch */
+.swatch.is-active .swatch__bar { animation: swatchProgress 6s linear forwards; }
+.hero:hover .swatch.is-active .swatch__bar { animation-play-state: paused; }
+@keyframes swatchProgress { from { width: 0; } to { width: 100%; } }
 
 /* ============================ HOME : sections ========================== */
 .intro { background: var(--cream); }
