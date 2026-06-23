@@ -129,7 +129,7 @@
           "<h3>" + p.name + "</h3>" +
           '<p class="pcard__blurb">' + p.blurb + "</p>" +
           '<div class="pcard__foot">' +
-            '<span class="pcard__price">$' + p.price + "</span>" +
+            '<span class="pcard__price">Rs ' + p.price + "</span>" +
             '<span class="pcard__finish">' + p.finish + "</span>" +
           "</div>" +
         "</div>" +

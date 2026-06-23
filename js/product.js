@@ -44,7 +44,7 @@
         '<a href="category.html?cat=' + cat.id + '">' + cat.name + "</a></nav>" +
       '<span class="eyebrow">' + p.subcat + "</span>" +
       "<h1>" + p.name + "</h1>" +
-      '<div class="pd__price"><b>$' + p.price + '</b><span>incl. fittings · ex. installation</span></div>' +
+      '<div class="pd__price"><b>Rs ' + p.price + '</b><span>incl. fittings · ex. installation</span></div>' +
       '<p class="pd__desc">' + p.blurb + " Built and finished to Harmony's standard, with a lifetime mechanical warranty." +
       "</p>" +
       '<div class="pd__opts"><h4>Finish</h4><div class="finish-row">' +
@@ -88,7 +88,7 @@
             '<div class="pcard__quick">View details</div></div>' +
           '<div class="pcard__body"><div class="pcard__tag">' + r.subcat + "</div>" +
             "<h3>" + r.name + "</h3>" +
-            '<div class="pcard__foot"><span class="pcard__price">$' + r.price + "</span>" +
+            '<div class="pcard__foot"><span class="pcard__price">Rs ' + r.price + "</span>" +
             '<span class="pcard__finish">' + r.finish + "</span></div></div>" +
         "</a>"
       );

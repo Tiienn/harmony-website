@@ -159,12 +159,27 @@
             '<div class="pcard__tag">' + p.subcat + "</div>" +
             "<h3>" + p.name + "</h3>" +
             '<div class="pcard__foot">' +
-              '<span class="pcard__price">$' + p.price + "</span>" +
+              '<span class="pcard__price">Rs ' + p.price + "</span>" +
               '<span class="pcard__finish">' + p.finish + "</span>" +
             "</div>" +
           "</div>" +
         "</a>"
       );
     }).join("");
+
+    // edge arrows: scroll the row by ~one viewport-width of cards
+    var pPrev = document.querySelector(".prow-arrow--prev");
+    var pNext = document.querySelector(".prow-arrow--next");
+    function prowStep() { return Math.max(prow.clientWidth * 0.85, 260); }
+    function prowUpdate() {
+      var max = prow.scrollWidth - prow.clientWidth - 2;
+      if (pPrev) pPrev.disabled = prow.scrollLeft <= 2;
+      if (pNext) pNext.disabled = prow.scrollLeft >= max;
+    }
+    if (pPrev) pPrev.addEventListener("click", function () { prow.scrollBy({ left: -prowStep(), behavior: "smooth" }); });
+    if (pNext) pNext.addEventListener("click", function () { prow.scrollBy({ left: prowStep(), behavior: "smooth" }); });
+    prow.addEventListener("scroll", prowUpdate, { passive: true });
+    window.addEventListener("resize", prowUpdate);
+    prowUpdate();
   }
 })();

@@ -286,8 +286,8 @@
       blurb:
         "Harmony designs and engineers premium hardware for the modern kitchen and home — storage, motion, water and thresholds, made to live together.",
       email: "hello@harmony-living.com",
-      phone: "+1 (415) 555-0192",
-      address: "180 Maker's Row, Design District",
+      phone: "5904 1300",
+      address: "20 Odette Ernest St, Port Louis",
     },
     categories,
     productsById,
