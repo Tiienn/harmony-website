@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — Harmony</title>
+  <meta name="description" content="Harmony product detail." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315130e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23b4863f' stroke-width='2'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="header is-light">
+    <div class="wrap">
+      <a class="brand" href="index.html">HARMONY<span class="dot"></span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <div class="has-drop">
+          <span class="navlink active" tabindex="0" role="button" aria-haspopup="true">Products
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><path d="M6 9l6 6 6-6"/></svg>
+          </span>
+          <div class="drop js-cat-drop"></div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-tools">
+        <a class="icon-btn icon-btn--search" href="category.html" aria-label="Browse all products">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </a>
+        <button class="burger" aria-label="Open menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <nav class="js-cat-mobile" aria-label="Categories"></nav>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="mm-foot">hello@harmony-living.com · +1 (415) 555-0192</div>
+  </div>
+
+  <main class="page">
+    <section class="pd">
+      <div class="wrap">
+        <div class="pd__grid"></div>
+      </div>
+    </section>
+
+    <section class="section related">
+      <div class="wrap">
+        <div class="cats__head">
+          <div class="section-head">
+            <span class="eyebrow">More from this collection</span>
+            <h2>You may also like</h2>
+          </div>
+        </div>
+        <div class="pgrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div>
+          <a class="brand" href="index.html">HARMONY<span class="dot"></span></a>
+          <p class="footer__about">Premium hardware for the modern kitchen and home — storage, motion, water and thresholds, made to live together.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-.5-2 .5-5 1-7M12 3a7 7 0 0 0-3 13c-.2-1 .3-3 .8-5 0 0-.3-1 .2-2 .8-1.5 2.8-.6 2.5 1-.3 1.4-.8 2.5 0 3.2 1.4 1.2 3.5-1 3.5-3.7A5 5 0 0 0 12 3z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h5>Products</h5>
+          <nav class="footer__links js-cat-foot"></nav>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <nav class="footer__links">
+            <a href="about.html">About Harmony</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html">Showroom</a>
+            <a href="about.html">Sustainability</a>
+            <a href="contact.html">Trade enquiries</a>
+          </nav>
+        </div>
+        <div class="footer__news">
+          <h5>Newsletter</h5>
+          <p>New collections and design notes, occasionally. No noise.</p>
+          <form class="news-form">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required />
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span class="js-year"></span> Harmony Living. All rights reserved.</span>
+        <span>Designed &amp; engineered with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
