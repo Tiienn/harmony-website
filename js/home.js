@@ -65,8 +65,19 @@
     slides.forEach(function (s, i) { s.classList.toggle("is-active", i === idx); });
     swatches.forEach(function (s, i) { s.classList.toggle("is-active", i === idx); });
     if (countEl) countEl.textContent = ("0" + (idx + 1)).slice(-2);
+    centerSwatch();
+  }
+
+  // Centre the active swatch WITHIN the strip only — horizontal scroll of the
+  // track, never the page. (scrollIntoView would scroll every ancestor, yanking
+  // the whole page back up to the hero each time the banner auto-rotates.)
+  function centerSwatch() {
     var active = swatches[idx];
-    if (active) active.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
+    if (!active || track.scrollWidth <= track.clientWidth + 2) return;
+    var a = active.getBoundingClientRect();
+    var t = track.getBoundingClientRect();
+    var delta = (a.left + a.width / 2) - (t.left + t.width / 2);
+    if (Math.abs(delta) > 1) track.scrollBy({ left: delta, behavior: "smooth" });
   }
   function go(n) { idx = (n + slides.length) % slides.length; render(); }
   function next() { go(idx + 1); }
